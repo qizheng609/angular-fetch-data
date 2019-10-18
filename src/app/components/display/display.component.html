@@ -1,0 +1,39 @@
+<div class = "display-area" [hidden] = "message">
+        <div class = "table-area">
+                <table>
+                    <thead> 
+                        <tr> 
+                            <td> User ID </td> 
+                            <td> Item ID </td>
+                            <td> Title </td>
+                            <td> Body </td> 
+                            <td> Detail </td>
+                        </tr>
+                    </thead>
+                    <tbody class = "tblPost">
+                        <tr *ngFor="let item of itemDetails">
+                            <td> {{item.userId}} </td>
+                            <td> {{item.id}} </td>
+                            <td> {{item.title}} </td>
+                            <td> {{item.body}} </td> 
+                            <td> <button (click) = "showDetail(item)"> Detail </button> </td>
+                        </tr>
+                    </tbody>
+                </table>
+        </div>
+</div>
+
+<!-- The Modal -->
+<div class="modal" [hidden] = "isShow">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <button class="close" (click) = "closeModel()" > Close </button>
+      <div class = "panel">
+            <h3>ID: <span> {{detail.id}} </span> </h3>
+            <h3>Email: <span> {{detail.email}} </span> </h3>
+            <h3>Comment: <span> {{detail.body}} </span> </h3>
+      </div>
+    </div>
+  
+</div>

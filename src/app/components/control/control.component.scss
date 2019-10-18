@@ -1,0 +1,19 @@
+.control-area{
+    width: 50%;
+    border: 1px soild black;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    background-color:white;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+button{
+    margin: 10px;
+    padding: 10px;
+    background-color: cornflowerblue;
+    cursor: pointer;
+    color: white;
+}
