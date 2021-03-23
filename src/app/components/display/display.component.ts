@@ -14,8 +14,12 @@ export class DisplayComponent implements OnInit {
   id: any;
   detail: any;
   isShow = true;
-  constructor(private getjasondataservice: GetItemDataService) {
-    getjasondataservice.getItemDetail().subscribe(response => {
+  constructor(private getjasondataservice: GetItemDataService) { }
+
+
+
+  ngOnInit() {
+    this.getjasondataservice.getItemDetail().subscribe(response => {
       this.itemDetails = response.map(item => {
         return new Item(
             item.userId,
@@ -25,10 +29,6 @@ export class DisplayComponent implements OnInit {
         );
       });
     });
-  }
-
-
-  ngOnInit() {
   }
 
 
