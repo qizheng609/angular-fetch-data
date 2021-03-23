@@ -1,6 +1,7 @@
 {
   "name": "data-fetch",
   "version": "0.0.0",
+  "author": "Joey Ren",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
