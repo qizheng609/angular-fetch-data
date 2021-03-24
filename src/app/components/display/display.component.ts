@@ -9,7 +9,6 @@ import { GetItemDataService } from 'src/app/services/get-item-data.service';
 })
 export class DisplayComponent implements OnInit {
 
-  @Input() message: any;
   itemDetails = new Array<Item>();
   id: any;
   detail: any;

@@ -7,21 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ControlComponent implements OnInit {
 
-  isShow = true;
-
-  message = this.isShow;
+  isShow: boolean;
 
   constructor() { }
 
   ngOnInit() {
-  }
-
-  showData() {
-    this.isShow = false;
-  }
-
-  hideData() {
     this.isShow = true;
+  }
+
+  showOrHide() {
+    this.isShow = !this.isShow;
   }
 
 }
